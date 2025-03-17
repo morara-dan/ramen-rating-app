@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #410202;
+}
+
+h1{
+    background-color: #013f12;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+
+div#collection{
+    height: 250px;
+    width: 100%;
+    display: grid;
+    position: relative;
+    place-items: center;
+    
+
+}
+
+
+.aladin-regular {
+    font-family: "Aladin", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .slideTrack {
+    display: flex;
+    width: 100%;
+    animation: scroll 50s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  } 
+
+  .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 100px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ramen {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+  }
+
+  .ramen img {
+    width: 150%;
+    height: 150px;
+    margin: 10px;
+  }
