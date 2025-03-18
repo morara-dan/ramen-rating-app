@@ -18,31 +18,47 @@
     </div>
 
     <div id="ramen-detail">
-        <img id="img-detail"  src="nirvana.jpg" alt="nirvana">
+        <img id="img-detail" onclick="" src="nirvana.jpg" alt="nirvana">
         <div id="text-detail">
             <h2>Nirvana</h2>
             <h3></h3>
         </div>
     </div>
+
+    <div id="stats"></div>
+    <div id="form">
+        <form action="">
+            <div class="forms">
+                <label for="fname">Name</label>
+                <br>
+                <input class="form-inputs" name= "name" id="fname" type="text">
+            </div>
+            <div class="forms">
+                <label for="frestaurant">Restaurant</label>
+                <br>
+                <input class="form-inputs" name="restaurant" id="frestaurant" type="text">
+            </div>
+            <div class="forms">
+                <label for="fimage">Image</label>
+                <br>
+                <input class="form-inputs" name="image" id="fimage" type="text">
+            </div>
+            <div class="forms">
+                <label for="frating">Rating</label>
+                <br>
+                <input class="form-inputs" name="rating" id="frating" type="text">
+            </div>
+            <div class="forms">
+                <label for="fcomment">Comment</label>
+                <br>
+                <input class="form-inputs" name="comment" id="fcomment" type="text">
+            </div>
+            <button type="submit" id="add-ramen" class="add-ramen">Add Ramen</button>
+        </form>
+    </div>
+
     
-    <script>
-        const ramens = [
-            { id: 1, name: "Shoyu Ramen", restaurant: "Ichiran", image: "shoyu.jpg", rating: 5, comment: "Delicious!" },
-            { id: 2, name: "Miso Ramen", restaurant: "Menya", image: "miso.jpg", rating: 4, comment: "Very flavorful!" },
-            { id: 3, name: "Tonkotsu Ramen", restaurant: "Ramen-ya", image: "tonkotsu.jpg" }
-        ];
-
-        function displayRamen(){
-            const ramenMenu = document.getElementById("ramen-menu");
-            ramens.forEach(ramen => {
-                const img = document.createElement("img");
-                img.src = ramen["image"];
-                img.alt = ramen["name"];
-                ramenMenu.appendChild(img)
-
-            })
-        }
-        displayRamen()
-    </script>
+<script src = "./index.js">
+</script>
 </body>
 </html>
