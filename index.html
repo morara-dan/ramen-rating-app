@@ -10,15 +10,39 @@
     <div id="top">
         <h1 class="aladin-regular">El's Ramen Rater</h1>
     </div>
-    <div id="collection">      
-        <div class="ramen">
-            <img src="kojiro.jpg" >
+    <div id="ramen-menu">      
+    <!----  <img src="kojiro.jpg" >
             <img src="gyukotsu.jpg">
             <img src="naruto.jpg"> 
-            <img src="nirvana.jpg" >
-            <img src="shoyu.jpg" >
+            <img src="nirvana.jpg" > -->
+    </div>
+
+    <div id="ramen-detail">
+        <img id="img-detail"  src="nirvana.jpg" alt="nirvana">
+        <div id="text-detail">
+            <h2>Nirvana</h2>
+            <h3></h3>
         </div>
     </div>
     
+    <script>
+        const ramens = [
+            { id: 1, name: "Shoyu Ramen", restaurant: "Ichiran", image: "shoyu.jpg", rating: 5, comment: "Delicious!" },
+            { id: 2, name: "Miso Ramen", restaurant: "Menya", image: "miso.jpg", rating: 4, comment: "Very flavorful!" },
+            { id: 3, name: "Tonkotsu Ramen", restaurant: "Ramen-ya", image: "tonkotsu.jpg" }
+        ];
+
+        function displayRamen(){
+            const ramenMenu = document.getElementById("ramen-menu");
+            ramens.forEach(ramen => {
+                const img = document.createElement("img");
+                img.src = ramen["image"];
+                img.alt = ramen["name"];
+                ramenMenu.appendChild(img)
+
+            })
+        }
+        displayRamen()
+    </script>
 </body>
 </html>
