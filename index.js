@@ -40,6 +40,8 @@ function addSubmitListener(e){
     img.alt = newRamen.name;
     img.className = 'image-showers';
     ramenMenu.appendChild(img);
+
+    updateStatsDisplay(newRamen.name, newRamen.restaurant);
     return newObj;
 }
 
@@ -48,11 +50,31 @@ const replacedImage = document.getElementById('img-detail');
 let imge = ramens[0]["image"];
 
 ramenMenu.addEventListener('click', handleClick);
-function handleClick (){
-    if(event.target.classList.contains('image-showers')){
-        replacedImage.src = event.target.src;
-        replacedImage.alt = event.target.alt;
+function handleClick(event) {
+    if(event.target.classList.contains('image-showers')) {
+      replacedImage.src = event.target.src;
+      replacedImage.alt = event.target.alt;
+      
+      // Find which ramen was clicked
+      for(let i = 0; i < ramens.length; i++) {
+        if(ramens[i].image === event.target.src.split('/').pop()) {
+          // Update the stats 
+          updateStatsDisplay(ramens[i].name, ramens[i].restaurant);
+          break;
+        }
+      }
     }
-}
+  }
+
+  function updateStatsDisplay(name, restaurant) {
+    
+    document.querySelector('#stats-left h1').textContent = name;
+    document.querySelector('#stats-right h1').textContent = restaurant;
+    
+    document.querySelector('#text-detail h2').textContent = name;
+    document.querySelector('#text-detail h3').textContent = restaurant;
+  }
+
+updateStatsDisplay(ramens[0].name, ramens[0].restaurant);
 
 displayRamen()

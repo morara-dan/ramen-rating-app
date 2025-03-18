@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap&family=Poppins');
+@import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap&family=Poppins&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap&family=Nabla&family=Wallpoet');
 
 *{
     margin: 0;
@@ -9,20 +9,24 @@ body{
     width: 100%;
     height: 100vh;
     font-family: 'Roboto', sans-serif;
-    background-color: #250303;
+    background-color: #6e0758;
     background-image: url(bg2.1.png);
     background-repeat: no-repeat;
     background-size: cover;
 
 }
 
-h1{
-    background-color: #013f12;
-    font-family: "Aladin";
+#logo{
+    background-color: #230336;
+    font-family: "Nabla";
     color: white;
     padding: 10px 0;
-    text-align: center;
+    text-align: left;
     width: 100%;
+    letter-spacing: 10px;
+    padding-left: 40px;
+    box-shadow: 0 0 20px 5px #650abb, 
+                0 0 30px 10px #ba22e0;
 }
 
 
@@ -31,48 +35,75 @@ h1{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding: 15px;
 }
 
 #ramen-menu img {
     width: 190px;
     height: 150px;
     align-content: center;
+    padding: 7px;
 }
 
 #ramen-detail {
     width: 650px;
     height: 450px;
-    background:linear-gradient( #ff0682, #11a8ff) padding-box, linear-gradient(to right   #ff0682, #11a8ff, #2529ff) border-box;
     position: relative;
     margin: auto;
     margin-top: 50px;
-    border-radius: 100em;
+    border-radius: 5px;
     border: 5px solid transparent;
-}    
+    background: linear-gradient(to right, #fc2b82, #d314c9, #65a8ff);
+    box-shadow: 0 0 20px 5px #0853b6, 
+                0 0 30px 10px #913ffd;
+    padding: 5px;
+}
 
 #img-detail {
     width: 100%;
     height: 100%;
-    background:linear-gradient( #ff0682, #11a8ff) padding-box, linear-gradient(to right   #ff0682, #11a8ff, #2529ff) border-box;
-    border: 5px solid transparent;
+    border-radius: 5px;
+    background-color: white;
 }
 
 #text-detail {
-    background-color: rgba(240, 237, 199, 0.493);
+    background-color: rgba(3, 23, 61, 0.555);
     position: absolute;
     bottom: 0%;
     left: 0;
     margin-left: 5px;
     margin-bottom: 10px;
-    color: #004103;
+    color: #8cc0f0;
+    padding: 10px;
+    border-radius: 4px;
     
 }
 
-#stats {
+#stats-right {
     width: 400px;
-    height: 150px;
-    margin: auto;
-    background-color: #11a8ff;
+    height: 500px;
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    background-color: #11a8ff00;
+    font-family: "Tourney";
+    font-size: 30px;
+    text-align: center;
+    color: #1ca7f8;
+    
+}    
+
+#stats-left {
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    background-color: #11a8ff00;
+    font-family: "Tourney";
+    font-size: 30px;
+    text-align: center;
+    color: #1ca7f8;
 }    
 
 #form {
